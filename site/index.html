@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>HTML IS THE STRUCTURE ONLY</title>
+	<meta charset="utf-8">
+	<title>Coursera is Cool!</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style type="text/css">
+	.div,.span {
+               background-color: blue;
+               color: red;
+                  }
+		h1,.green/*group of element and class selector*/
+		{
+			color: green;
+			font-size: 20px
+
+		}
+		h3,h2/*group of element selectors*/
+		{
+			color:red;
+			font-size:20px
+			width:200px;
+		}
+		.orange/*Class selector*/
+		{
+			color: orange
+
+		}
+		p.article/*element with class selector*/
+		{
+			font-style: italic;
+		}
+		div>ul /*Child Selector i.e every ul element that is direct child of div element*/
+		{
+			color:purple;
+		}
+		.section1>article/*Child Selector*/
+		{
+			font-weight: bold;
+		}
+		section li/*Descendant Selector i.e every li that is inside(at any level) of h1*/
+		{
+			color: lawngreen
+		}
+		section article/*Descendant Selector*/
+		{
+			color: grey
+		}
+		.navigate li
+		{
+			list-style: none;
+		}
+		/*Pseudo-Class Selectors targets the ability to style based on the user experience*/
+		.navigate a:link,.navigate a:visited
+		{
+           text-decoration: none;
+           background-color: green;
+           border:1px solid blue;
+           display: block;
+           width: 200px;
+           text-align: center;
+           margin-bottom: 1px;
+
+		}
+		.navigate a:hover,.navigate a:active
+		{
+			background-color:red;
+			color: purple
+		}
+		#section_2 li  ul>li:nth-child(2)
+		{
+			font-size: 24px;
+			color: red;
+		}
+      #section_2 li  ul>li:nth-child(3):hover/*Combining pseudo-class selectors*/
+		{
+			background-color: green;
+			color: black;
+			cursor:pointer;
+		}
+	</style>
 </head>
 <body>
-<h1>Hello Coursera!</h1>
-<h2>To test</h2>
-<h3>finish</h3>
+	<header class="orange">some header info,usually consists of some company logo.<nav>navigation element - contains links to different parts of the website</nav></header>
+	<section class="navigate" >
+	<h1 id="Top">Links to sections of the page	</h1>
+		<ul>
+			<li><a href="#section1">Section 1</li>
+				<li><a href="#section2">Section 2</li>
+					<li><a href="#section3">Section 3</li>
+						<li><a href="#end">End</li>
+		</ul>
+</section>
+<section class="section1">
+	<a name="section1">
+	<h3>(#section1)Section 1</h3>
+	<article style="text-align: center;color: orange,font-weight:bold;">Article 1</article><!-- In-line Styling -->
+	<article>Article 2</article>
+	<article>Article 3</article>
+</section>
+<section id=section_2>
+	<a name="section2">
+	<h3>(#section2)Section 2</h3>
+	<p class="article">
+	<article>Article 4</article>
+	<article>Article 5</article>
+	<article>Article 6</article>
+</p>
+	<h2>Unordered list</h2>
+	<div>
+	My shopping list
+	<ul>
+		<li>milk</li>
+		<li class=juice>juice</li>
+		<li>donuts</li>
+		<li>cookies
+			<ul>
+				<li>super</li>
+				<li>zeera</li>
+				<li>butter puff</li>
+			</ul>
+			</li>
+	</ul>
+</div>
+<h2>Ordered list</h2>
+	<div>
+	cake receipe
+	<ol>
+		<li>take milk</li>
+		<li>take flour</li>
+		<li>take suger</li>
+		<li>Mix them 
+			<ol>
+				<li>first mix all the ingredients</li>
+				<li class = bake>bake</li>
+				<li>cool</li>
+			</ol>
+		</li>
+		<li>Enjoy!</li>
+	</ol>
+</div>
+<h2>&lt;than 90 &amp; &gt;than 50 </h2>
+</section>
+<aside>Aside - some info that is related to the main topic...</aside>
+
+<section class=links>
+	<a name="section3"></a>  
+	<h3>(#section3)Internal Links</h3>
+	we can link to the file in the same directory as this html file like this:
+	<a href="same-dir.html" title="same dir link"> Link to file in the same directory</a>
+	<a href="same-dir.html" title="same dir link">
+		<div>Div linking to file in same directory</div>
+	</a>
+</section>
+
+<section class=links>
+	<h3>External Links</h3>
+	<a href="https://validator.w3.org/nu/#textarea" target="=_blank" title="Link to Validate Code">Click Here To Validate your HTML Code
+	</a>
+</section>
+
+<h3 id="end">Go to Top:
+	<a href="#top">Go to Top</a>
+</h3>
+<img src="unnamed.jpg" width="400" height="=400">
+<p class="test">
+  <div class="div">Hello</div>
+  <span class="span">World!</span>
+</p>
+<article style="text-align: center;color: orange,font-weight:bold;">Article TEST</article><!-- In-line Styling -->
 </body>
+<footer class="green" >COPYRIGHT &copy; 2020</footer>
 </html>
